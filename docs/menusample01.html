@@ -1,0 +1,43 @@
+<!--
+    参考サイト 英語の文章は翻訳使うかソースと実行結果を見ればOK
+    その1: 
+    http://bacsoftwareconsulting.com/blog/index.php/web-development/how-to-create-a-responsive-menu-without-jquery/
+    その2:
+    https://www.webprofessional.jp/flexbox-css-flexible-box-layout/
+    その3:
+    https://www.adam-bray.com/2017/02/18/create-a-html-5-and-css-3-mobile-navigation-bar/
+    その4:
+    https://book.studio947.net/article/2418/
+    サンプル:
+    https://codepen.io/SitePoint/pen/rwKzrz?editors=1100
+-->
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>シンプルなメニュー</title>
+<!-- viewport: 各デバイスの幅に合わせてブラウザ側でサイズ調整してくれという定義 -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="menuSample01.css">
+
+</head>
+<body>
+    <nav>
+        <label for="show-menu" class="show-menu">メニュー表示</label>
+        <input type="checkbox" id="show-menu" role="button">
+        
+        <ul id="menu">
+            <!-- リンクは飛ばない -->
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">試合</a></li>
+            <li><a href="#">観戦</a></li>
+            <li><a href="#">ニュース</a></li>
+            <li><a href="#">グッズ</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+    
+    <br>
+    リンクはクリックしても飛ばないよ。
+</body>
+</html>

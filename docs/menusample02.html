@@ -1,0 +1,48 @@
+<!--
+    参考サイト 英語の文章は翻訳使うかソースと実行結果を見ればOK
+    その1: 
+    http://bacsoftwareconsulting.com/blog/index.php/web-development/how-to-create-a-responsive-menu-without-jquery/
+    その2:
+    https://www.webprofessional.jp/flexbox-css-flexible-box-layout/
+    その3:
+    https://www.adam-bray.com/2017/02/18/create-a-html-5-and-css-3-mobile-navigation-bar/
+    その4:
+    https://book.studio947.net/article/2418/
+    サンプル:
+    https://codepen.io/SitePoint/pen/rwKzrz?editors=1100
+-->
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>###CSS のみのナビゲーション メニュー</title>
+<!-- viewport で各デバイスに合わせる設定をする -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="menuSample02.css">
+
+</head>
+<body>
+    <nav>
+        <ul id="menu">
+        <li><a href="#">ホーム</a></li>
+        <li>
+            <a href="#">試合 &darr;</a>
+            <ul class="hidden">
+                <li><a href="#">試合情報</a></li>
+                <li><a href="#">試合日程・結果</a></li>
+            </ul>
+         </li>
+         <li>
+            <a href="#">ニュース &darr;</a>
+            <ul class="hidden">
+                <li><a href="#">試合</a></li>
+                <li><a href="#">トップチーム</a></li>
+                <li><a href="#">スクール</a></li>
+            </ul>
+        </li>
+        <li><a href="#">グッズ</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+    </ul>
+</nav>
+</body>
+</html>

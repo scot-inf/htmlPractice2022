@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax サンプル</title>
+    <script  type="text/javascript" src="./ajaxsample.js"></script>
+</head>
+<body>
+    <h3>参考サイト</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/ja/docs/Web/Guide/AJAX/Getting_Started" target="_blank">始めましょう - ウェブデベロッパーガイド | MDN</a></li>
+            <li><a href="https://cre8cre8.com/javascript/use-myapi-js-app.htm" target="_blank">XMLHttpRequestとピュアJavaScriptを使ってナウなヤングにバカウケなAjax</a>
+        </li>
+    </ul>
+    <button id="ajaxButton" type="button">要求を実行</button>
+
+    <script>
+    (function() {
+        var httpRequest;
+        document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+        
+        function makeRequest() {
+            httpRequest = new XMLHttpRequest();
+    
+            if (!httpRequest) {
+                alert('中断 :( XMLHTTP インスタンスを生成できませんでした');
+                return false;
+            }
+            httpRequest.onreadystatechange = alertContents;
+            httpRequest.open('GET', 'sample.txt');
+            httpRequest.send();
+        }
+    
+        function alertContents() {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    alert(httpRequest.responseText);
+                } else {
+                    alert('リクエストに問題が発生しました');
+                }
+            }
+        }
+    })();
+    </script>
+
+</body>
+</html>
